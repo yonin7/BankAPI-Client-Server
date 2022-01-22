@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+require('./db/mongoose');
+const Users = require('./models/users');
+const usersRouter = require('./routers/users');
 
 const app = express();
 
@@ -10,6 +13,8 @@ const publicPath = path.join(__dirname, 'client/build');
 
 app.use(cors());
 app.use(express.json());
+app.use(usersRouter);
+
 app.use(express.static(publicPath));
 
 app.get('/api/users', (req, res) => {
