@@ -18,7 +18,7 @@ router.post('/api/users', async (req, res) => {
 router.get('/api/users', async (req, res) => {
   try {
     const users = await Users.find({});
-    res.status(200).send('users');
+    res.status(200).send(users);
   } catch (err) {
     res.status(500).send();
   }
