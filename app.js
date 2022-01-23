@@ -17,13 +17,13 @@ app.use(usersRouter);
 
 app.use(express.static(publicPath));
 
-app.get('/api/users', (req, res) => {
-  try {
-    res.status(200).send('userName:bob');
-  } catch (e) {
-    res.status(400).send('e.message');
-  }
-});
+// app.get('/api/users', (req, res) => {
+//   try {
+//     res.status(200).send('userName:bob');
+//   } catch (e) {
+//     res.status(400).send('e.message');
+//   }
+// });
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

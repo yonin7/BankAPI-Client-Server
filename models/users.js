@@ -10,15 +10,15 @@ const userSchema = new Schema({
   isActive: {
     type: Boolean,
   },
-  // passportID: {
-  //   type: String,
-  //   required: true,
-  //   validate(value) {
-  //     if (!validator.isPassportNumber(value, 'US')) {
-  //       throw new Error('must be Israeli Passport');
-  //     }
-  //   },
-  // },
+  passportID: {
+    type: String,
+    required: true,
+    // validate(value) {
+    //   if (!validator.isPassportNumber(value, 'US')) {
+    //     throw new Error('must be Israeli Passport');
+    //   }
+    // },
+  },
   cash: {
     type: Number,
     default: 0,
@@ -27,15 +27,6 @@ const userSchema = new Schema({
     type: Number,
     default: 0,
   },
-  // phone: {
-  //   type: String,
-  //   required: true,
-  //   validate(value) {
-  //     if (!validator.isMobilePhone(value, 'he-IL')) {
-  //       throw new Error('must be Israeli phone number');
-  //     }
-  //   },
-  // },
 });
 
 const Users = model('users', userSchema);
