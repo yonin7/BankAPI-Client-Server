@@ -59,6 +59,8 @@
   height: 2rem;
   width: 2rem;
   border-radius: 1rem;
+  background-color: #d8d1d1;
+  border: none;
 }
 
 @media (max-width: 868px) {
