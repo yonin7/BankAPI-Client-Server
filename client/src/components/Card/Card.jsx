@@ -89,30 +89,32 @@ const Card = ({ usersData, user, handleDelete }) => {
           min="0"
           onChange={(e) => changeMoney(e)}
         />
-        <input
-          className="submit"
-          type="submit"
-          value="Deposit"
-          onClick={(e) => handleDeposit(e)}
-        />
-        <input
-          className="submit"
-          type="submit"
-          value="Credit"
-          onClick={(e) => handleCredit(e)}
-        />
-        <input
-          className="submit"
-          type="submit"
-          value="Withdraw"
-          onClick={(e) => handleWithdraw(e)}
-        />
-        <input
-          className="submit"
-          type="submit"
-          value="Transfer"
-          onClick={(e) => optionsTransfer(e)}
-        />
+        <div className="actionsContainer inputs">
+          <input
+            className="submit"
+            type="submit"
+            value="Deposit"
+            onClick={(e) => handleDeposit(e)}
+          />
+          <input
+            className="submit"
+            type="submit"
+            value="Credit"
+            onClick={(e) => handleCredit(e)}
+          />
+          <input
+            className="submit"
+            type="submit"
+            value="Withdraw"
+            onClick={(e) => handleWithdraw(e)}
+          />
+          <input
+            className="submit"
+            type="submit"
+            value="Transfer"
+            onClick={(e) => optionsTransfer(e)}
+          />
+        </div>
         {hide ? null : (
           <select onClick={(e) => handleTransfer(e)}>
             {usersData.map((usery) => {
