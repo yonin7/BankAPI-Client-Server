@@ -55,23 +55,27 @@ const Card = ({ usersData, user, handleDelete }) => {
 
   return (
     <div className="container">
-      <div className="detailsContainer">
-        <label>PassportID:</label>
-        <div>{user.passportID}</div>
-        <label> Full Name:</label>{' '}
-        <div type="text" id="name">
-          {user.name}
-        </div>
-        <label> Cash:</label>
-        <div type="text" id="cash">
-          {user.cash}
-        </div>
-        <label> Credit:</label>{' '}
-        <div type="text" id="credit">
-          {user.credit}
+      <div className="text">
+        <h2>User Details:</h2>
+        <div className="detailsContainer">
+          <label>PassportID:</label>
+          <div>{user.passportID}</div>
+          <label> Full Name:</label>{' '}
+          <div type="text" id="name">
+            {user.name}
+          </div>
+          <label> Cash:</label>
+          <div type="text" id="cash">
+            {user.cash}
+          </div>
+          <label> Credit:</label>{' '}
+          <div type="text" id="credit">
+            {user.credit}
+          </div>
         </div>
       </div>
       <div className="actionsContainer">
+        <h2>Actions:</h2>
         <input
           className="Delete"
           type="submit"
@@ -79,19 +83,32 @@ const Card = ({ usersData, user, handleDelete }) => {
           onClick={() => handleDelete(user._id)}
         />
         {/* <Input user={user} handleUpdate={handleUpdate} fields={fields} /> */}
-        <input type="number" min="0" onChange={(e) => changeMoney(e)} />
         <input
+          className="moneyinput"
+          type="number"
+          min="0"
+          onChange={(e) => changeMoney(e)}
+        />
+        <input
+          className="submit"
           type="submit"
           value="Deposit"
           onClick={(e) => handleDeposit(e)}
         />
-        <input type="submit" value="Credit" onClick={(e) => handleCredit(e)} />
         <input
+          className="submit"
+          type="submit"
+          value="Credit"
+          onClick={(e) => handleCredit(e)}
+        />
+        <input
+          className="submit"
           type="submit"
           value="Withdraw"
           onClick={(e) => handleWithdraw(e)}
         />
         <input
+          className="submit"
           type="submit"
           value="Transfer"
           onClick={(e) => optionsTransfer(e)}

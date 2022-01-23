@@ -61,7 +61,16 @@
   border: 1px solid brown;
   border-bottom: 3px black solid;
   position: relative;
+  text-align: left;
 }
-
-.cardscontainer {
+form {
+  display: flex;
+  flex-direction: column;
+}
+.submit {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5rem;
+  background-color: rgb(72, 37, 55);
+  color: white;
 }

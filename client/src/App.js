@@ -59,21 +59,38 @@ function App() {
           );
         })}
       <div className="inputcontainer">
+        <h2>Add Account:</h2>
         <form>
-          <h5>passportID</h5>
+          <h5>PassportID:</h5>
           <input
             type="text"
             id="passportID"
+            placeholder="passportID"
             onChange={(e) => handleCreate(e)}
           />
-          <h5> name</h5>{' '}
-          <input type="text" id="name" onChange={(e) => handleCreate(e)} />
-          <h5> cash</h5>
-          <input type="text" id="cash" onChange={(e) => handleCreate(e)} />
-          <h5> credit</h5>{' '}
-          <input type="text" id="credit" onChange={(e) => handleCreate(e)} />
+          <h5> Name:</h5>{' '}
+          <input
+            type="text"
+            id="name"
+            placeholder="name"
+            onChange={(e) => handleCreate(e)}
+          />
+          <h5> Cash:</h5>
+          <input
+            type="text"
+            id="cash"
+            placeholder="cash"
+            onChange={(e) => handleCreate(e)}
+          />
+          <h5> Credit:</h5>{' '}
+          <input
+            type="text"
+            id="credit"
+            placeholder="credit"
+            onChange={(e) => handleCreate(e)}
+          />
         </form>
-        <input type="submit" onClick={() => sendNewUser()} />
+        <input className="submit" type="submit" onClick={() => sendNewUser()} />
       </div>
       ;
     </div>
